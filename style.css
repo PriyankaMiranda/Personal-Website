@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background: url('/home/priyanka/Documents/Projects/personal_website/background.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.navbar{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.social{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    margin-top: 30vh;
+    width:50%;
+}
+.content > h1{
+    font-weight: 600;
+    /* letter-spacing: 1.2px; */
+    font-size: 34px;
+}
+.content > h1 > span{
+    border-bottom: 5px solid #666;
+}
+.content > p{
+    color: #666;
+    font-size: 16px;
+}
+
+@media only screen and (min-width:1024px) {
+.content{
+    width:100%;
+}
+
+.content > h1{
+    font-size: 94px;
+    width:100%;
+}
+} 
