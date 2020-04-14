@@ -1,4 +1,5 @@
 body{
+    color: #b5509a;
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
@@ -38,10 +39,10 @@ body{
     font-size: 34px;
 }
 .content > h1 > span{
-    border-bottom: 5px solid #666;
+    border-bottom: 5px solid #664b78;
 }
 .content > p{
-    color: #666;
+    color: #664b78;
     font-size: 16px;
 }
 
