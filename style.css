@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
-    background: url('/home/priyanka/Documents/Projects/personal_website/background.jpg');
+    background: url('./images/background.jpg');
     background-size: cover;
     height: 100vh;
 }
