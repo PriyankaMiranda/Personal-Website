@@ -2,56 +2,111 @@ body{
     color: #b5509a;
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
-    background: url('./images/background.jpg');
-    background-size: cover;
-    height: 100vh;
-}
-.overlay{
+    font-family: 'Poppins', sans-serif; 
+    background:rgb(225, 221, 222);
     height: 100%;
-    width: 100%;
-    background: rgba(255,255,255,0.6);
+    overflow-x: hidden !important;
 }
+
+
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+
+}
+
 .container{
     width: 90%;
     margin: auto;
 }
+
 .navbar{
+    color: #664b78;
     display: flex;
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 20px;
 }
 .social{
-    width: 100px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.content{
-    margin-top: 30vh;
+.content-1{
+    margin-top: 20vh;
     width:100%;
 }
-.content > h1{
+.content-1 > h1{
     font-weight: 600;
     /* letter-spacing: 1.2px; */
     font-size: 34px;
 }
-.content > h1 > span{
+.content-1 > h1 > span{
     border-bottom: 5px solid #664b78;
 }
-.content > p{
+.content-2 {
     color: #664b78;
     font-size: 16px;
 }
-
-@media only screen and (min-width:1024px) {
-.content{
-    width:100%;
+.content-3 {
+text-align: center;
 }
 
-.content > h1{
+.content-4 {
+text-align: center;
+}
+
+@media only screen and (min-width:1024px) {
+
+.bg-top{
+    background: url('./images/bottom_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    background-position: center center;    
+}
+.bg-bottom{
+    height: 330px;
+    background: url('./images/top_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    background-position: center center;    
+}
+.content-1{
+    margin-top: 30vh;
+    width:100%;
+}
+.content-1 > h1{
     width:100%;
 }
 } 
+
+.falling-leaves {
+  background: rgb(225, 221, 222) no-repeat center center;
+}
+
+.leaf-scene {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 100vw;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.leaf-scene div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/leaf.svg) no-repeat;
+  background-size: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
