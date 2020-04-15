@@ -1,4 +1,4 @@
-var LeafScene = function(el) {
+var LeafScene = function(el) { 
     this.viewport = el;
     this.world = document.createElement('div');
     this.leaves = [];
@@ -21,7 +21,6 @@ var LeafScene = function(el) {
     this.timer = 0;
 
     this._resetLeaf = function(leaf) {
-
         // place leaf towards the top left
         leaf.x = this.width * 2 - Math.random() * this.width * 1.75;
         leaf.y = -10;
@@ -67,7 +66,7 @@ var LeafScene = function(el) {
         // leaf.y=leaf.y;
         leaf.rotation.value += leaf.rotation.speed;
 
-        var t = 'translateX( ' + leaf.x / 1.5 + 'px ) translateY( ' + leaf.y/ 2 + 'px ) translateZ( ' + leaf.z + 'px )  rotate' + leaf.rotation.axis + '( ' + leaf.rotation.value + 'deg )';
+        var t = 'translateX( ' + leaf.x / 1.5 + 'px ) translateY( ' + leaf.y/1.1 + 'px ) translateZ( ' + leaf.z + 'px )  rotate' + leaf.rotation.axis + '( ' + leaf.rotation.value + 'deg )';
         if (leaf.rotation.axis !== 'X') {
             t += ' rotateX(' + leaf.rotation.x + 'deg)';
         }
@@ -80,6 +79,7 @@ var LeafScene = function(el) {
         if (leaf.x < -10 || leaf.y > this.height + 10) {
             this._resetLeaf(leaf);
         }
+               
 
     }
 
@@ -106,10 +106,12 @@ var LeafScene = function(el) {
 }
 
 LeafScene.prototype.init = function() {
-
+    leaves_num=this.options.numLeaves;
     for (var i = 0; i < this.options.numLeaves; i++) {
+        x = document.createElement('div')
+        x.setAttribute('class', 'leaf'+i);
         var leaf = {
-            el: document.createElement('div'),
+            el: x,
             x: 0,
             y: 0,
             z: 0,
@@ -151,6 +153,9 @@ LeafScene.prototype.init = function() {
 }
 
 LeafScene.prototype.render = function() {
+    if(check){
+        return
+    }
     this._updateWind();
     for (var i = 0; i < this.leaves.length; i++) {
         this._updateLeaf(this.leaves[i]);
@@ -161,9 +166,26 @@ LeafScene.prototype.render = function() {
     requestAnimationFrame(this.render.bind(this));
 }
 
+var check= false
+var leaves_num=0;
 // start up leaf scene
-var leafContainer = document.querySelector('.falling-leaves'),
-    leaves = new LeafScene(leafContainer);
+var leafContainer = document.querySelector('.falling-leaves');
+leaves = new LeafScene(leafContainer);
 
 leaves.init();
 leaves.render();
+
+
+
+
+
+$(".falling-leaves").click(function(){
+
+$(".falling-leaves").contents().unwrap();
+$(".leaf-scene").contents().unwrap();
+check=true;
+for (var i = 0; i < leaves_num; i++) {
+$(".leaf"+i).remove();
+}
+
+});

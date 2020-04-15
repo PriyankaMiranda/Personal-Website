@@ -33,7 +33,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}   
+
+
+/* unvisited link */
+.[class^="fab"]:link {
+  color: green;
 }
+
+/* visited link */
+.[class^="fab"]:visited {
+  color: green;
+}
+
+/* mouse over link */
+.[class^="fab"]:hover {
+  color: red;
+}
+
+/* selected link */
+.[class^="fab"]:active {
+  color: yellow;
+} 
+
 
 
 
