@@ -103,7 +103,7 @@ text-align: center;
   left: 0;
   width: 20px;
   height: 20px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/leaf.svg) no-repeat;
+  background: url("./images/leaf.svg") no-repeat;
   background-size: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
