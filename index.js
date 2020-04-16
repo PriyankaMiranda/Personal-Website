@@ -192,16 +192,45 @@ $(".leaf"+i).remove();
 
 
 
-
+function upload_books(){
 var num_of_books=6;//update this everytime until you improve the code i guess
-
 for (var i = 1; i < num_of_books+1; i++) {
 let r = Math.random().toString(36).substring(7);
-$('<div class="slide"><img src="./images/books/book_'+i+'.jpg" class='+r+' height="250" width="180"/></div>').appendTo(".slide-track");
+$('<div class="slide"><img src="./images/books/book_'+i+'.jpg" class="images-'+r+'" height="250" width="180"/></div>').appendTo(".slide-track");
+}
 }
 
+function upload_gallery(){
+var num_of_images=30;//update this everytime until you improve the code i guess
+
+for(var i = 1; i < num_of_images+1; i++) {
+
+var target_image = document.getElementById("img-"+i);
+console.log(target_image);
+console.log(EXIF.getData(target_image));
+all_tags=EXIF.getAllTags(target_image);
+console.log(all_tags);
+console.log(all_tags.Make);
 
 
 
+    // var make = EXIF.getTag(target_image.src, "ColorSpace");
 
 
+// EXIF.getData(target_image, function() {
+//     var orientation = EXIF.getTag(target_image, "Orientation");
+//     alert("Orientation reference is:  " + orientation);
+// });
+
+
+
+}
+}
+
+document.getElementsByTagName("BODY")[0].onscroll = function(event) {
+    upload_books()
+} 
+
+window.onload = function() {
+upload_gallery()
+}
