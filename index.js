@@ -187,5 +187,21 @@ check=true;
 for (var i = 0; i < leaves_num; i++) {
 $(".leaf"+i).remove();
 }
-
 });
+
+
+
+
+
+var num_of_books=6;//update this everytime until you improve the code i guess
+
+for (var i = 1; i < num_of_books+1; i++) {
+let r = Math.random().toString(36).substring(7);
+$('<div class="slide"><img src="./images/books/book_'+i+'.jpg" class='+r+' height="250" width="180"/></div>').appendTo(".slide-track");
+}
+
+
+
+
+
+
