@@ -176,11 +176,7 @@ leaves.init();
 leaves.render();
 
 
-
-
-
 $(".falling-leaves").click(function(){
-
 $(".falling-leaves").contents().unwrap();
 $(".leaf-scene").contents().unwrap();
 check=true;
@@ -188,8 +184,6 @@ for (var i = 0; i < leaves_num; i++) {
 $(".leaf"+i).remove();
 }
 });
-
-
 
 
 function upload_books(){
@@ -207,10 +201,12 @@ for(var i = 1; i < num_of_images+1; i++) {
 
 var target_image = document.getElementById("img-"+i);
 console.log(target_image);
-console.log(EXIF.getData(target_image));
-all_tags=EXIF.getAllTags(target_image);
-console.log(all_tags);
-console.log(all_tags.Make);
+// console.log(EXIF.getData(target_image));
+var orientation = EXIF.getTag(target_image, "Orientation");
+console.log(orientation)
+// all_tags=EXIF.getAllTags(target_image);
+// console.log(all_tags);
+// console.log(all_tags.Make);
 
 
 
@@ -218,7 +214,6 @@ console.log(all_tags.Make);
 
 
 // EXIF.getData(target_image, function() {
-//     var orientation = EXIF.getTag(target_image, "Orientation");
 //     alert("Orientation reference is:  " + orientation);
 // });
 
