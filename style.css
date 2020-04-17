@@ -83,6 +83,7 @@ p{
 
 .internal-box {
   display: flex;
+  justify-content: center;
   margin-top:10px;
   margin-bottom:10px;
 }
@@ -92,14 +93,12 @@ p{
     margin: auto;
     margin-left: 15px;
     margin-right: 15px;
-    width:auto;
     text-align: center;
     font-size: 16px;
 }
 
-.internal-box > div > p{
-    font-size: 12px;
-}
+.company{width:20%;}
+.work{width:70%;}
 
 
 
