@@ -47,9 +47,11 @@ p{
     justify-content: space-between;
 }
 
-#social-1:hover,
-#social-2:hover,
-#social-3:hover {
+.social>a:link{
+    color: #664b78;
+}
+
+.social>a:hover{
     color: #b5509a;
     cursor: pointer
 }
@@ -157,7 +159,10 @@ book-list {
 
 }
 
-
+#platitudes > p > a:link{
+    color: #b5509a;
+    text-decoration:none;
+}
 
 
 
@@ -213,20 +218,6 @@ img:hover {
   column-count:         4;
   }
 }
-/*@media (max-width: 800px) {
-  #photos {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}*/
-/*@media (max-width: 400px) {
-  #photos {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
-}*/
 
 
 .content-4 {
