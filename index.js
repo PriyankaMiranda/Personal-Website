@@ -227,5 +227,5 @@ document.getElementsByTagName("BODY")[0].onscroll = function(event) {
 } 
 
 window.onload = function() {
-upload_gallery()
+// upload_gallery()
 }
